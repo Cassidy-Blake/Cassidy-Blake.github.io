@@ -13,6 +13,20 @@
 </head>
 <body>
 
+  <!-- Password Gate -->
+  <div id="password-gate">
+    <div class="gate-box">
+      <img src="assets/images/ATMIcon.png" alt="Auto Tip Map" class="gate-icon">
+      <h2>This site is private</h2>
+      <p>Enter the password to continue.</p>
+      <form id="gate-form">
+        <input type="password" id="gate-input" placeholder="Password" autocomplete="off">
+        <button type="submit" class="btn btn-primary">Enter</button>
+      </form>
+      <p id="gate-error"></p>
+    </div>
+  </div>
+
   <!-- Navigation -->
   <nav class="navbar">
     <div class="container nav-container">
@@ -247,6 +261,33 @@
   </footer>
 
   <script>
+    // Password gate
+    (function() {
+      var hash = 'a1b2c3';
+      // Simple hash of the password for comparison
+      async function sha256(str) {
+        var buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+        return Array.from(new Uint8Array(buf)).map(function(b) { return b.toString(16).padStart(2, '0'); }).join('');
+      }
+      var HASH = '35ae27e2eebb05bd5708b3e5d1497fc8daa47696d6cb0261b410da3e009ac3f3';
+      var gate = document.getElementById('password-gate');
+      if (sessionStorage.getItem('atm-auth') === HASH) {
+        gate.style.display = 'none';
+      }
+      document.getElementById('gate-form').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        var val = document.getElementById('gate-input').value;
+        var h = await sha256(val);
+        if (h === HASH) {
+          sessionStorage.setItem('atm-auth', HASH);
+          gate.style.display = 'none';
+        } else {
+          document.getElementById('gate-error').textContent = 'Incorrect password.';
+          document.getElementById('gate-input').value = '';
+        }
+      });
+    })();
+
     // Mobile nav toggle
     const toggle = document.querySelector('.nav-toggle');
     const links = document.querySelector('.nav-links');
