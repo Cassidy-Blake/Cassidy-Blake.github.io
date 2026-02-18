@@ -170,6 +170,10 @@ img {
   color: var(--primary);
 }
 
+.nav-links a.btn {
+  color: #fff;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
