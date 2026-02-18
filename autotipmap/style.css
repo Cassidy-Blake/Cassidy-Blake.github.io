@@ -904,252 +904,164 @@ img {
 
 .guide-header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 }
 
 .guide-header h1 {
-  font-size: 32px;
-  margin-bottom: 8px;
+  font-size: 24px;
 }
 
-.guide-header p {
-  color: var(--text-secondary);
-  font-size: 16px;
-}
-
-/* Accordion container */
-.guide-accordion {
-  max-width: 720px;
+.guide-list {
+  max-width: 640px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-/* Topic (top level) */
-.guide-topic {
-  background: var(--surface);
+/* Topic row (top-level, grey background like the app) */
+.guide-topic-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--surface-alt);
   border: 1px solid var(--border);
   border-radius: 12px;
-  margin-bottom: 12px;
-  overflow: hidden;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: background 0.15s;
+  user-select: none;
 }
 
-.guide-topic > summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 24px;
-  font-size: 17px;
+.guide-topic-row:hover {
+  background: #E8ECF2;
+}
+
+.guide-topic-label {
+  font-size: 16px;
   font-weight: 700;
   color: var(--text);
-  cursor: pointer;
-  list-style: none;
-  transition: background 0.15s;
 }
 
-.guide-topic > summary::-webkit-details-marker {
+.guide-chevron {
+  font-size: 18px;
+  color: var(--text);
+  line-height: 1;
+}
+
+/* Topic content (hidden by default) */
+.guide-topic-content {
   display: none;
+  padding-left: 12px;
+  display: none;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.guide-topic > summary::after {
-  content: '';
-  width: 8px;
-  height: 8px;
-  border-right: 2.5px solid var(--text-secondary);
-  border-bottom: 2.5px solid var(--text-secondary);
-  transform: rotate(45deg);
-  transition: transform 0.2s;
-  flex-shrink: 0;
-  margin-left: 16px;
-}
-
-.guide-topic[open] > summary::after {
-  transform: rotate(-135deg);
-}
-
-.guide-topic > summary:hover {
-  background: var(--surface-alt);
-}
-
-.guide-topic[open] {
-  border-color: var(--secondary);
-}
-
-.guide-topic-body {
-  padding: 4px 24px 20px;
-}
-
-/* Direct content (for topics without subtopics, like Backing Up Data) */
-.guide-direct-content {
-  padding: 4px 0 0;
-}
-
-.guide-direct-content p {
-  color: var(--text-secondary);
-  font-size: 15px;
-  line-height: 1.7;
-  margin-bottom: 10px;
-}
-
-.guide-direct-content p:last-child {
-  margin-bottom: 0;
-}
-
-.guide-direct-content code {
-  background: var(--surface-alt);
-  padding: 2px 7px;
-  border-radius: 5px;
-  font-size: 14px;
-  color: var(--primary);
-}
-
-/* Subtopic (nested level) */
-.guide-subtopic {
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  margin-bottom: 8px;
-  overflow: hidden;
-}
-
-.guide-subtopic:last-child {
-  margin-bottom: 0;
-}
-
-.guide-subtopic > summary {
+/* Subtopic row (white background, indented) */
+.guide-sub-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 20px;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text-secondary);
+  background: var(--surface);
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 12px 14px;
   cursor: pointer;
-  list-style: none;
-  transition: background 0.15s, color 0.15s;
+  transition: background 0.15s;
+  user-select: none;
 }
 
-.guide-subtopic > summary::-webkit-details-marker {
-  display: none;
-}
-
-.guide-subtopic > summary::after {
-  content: '';
-  width: 7px;
-  height: 7px;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: rotate(45deg);
-  transition: transform 0.2s;
-  flex-shrink: 0;
-  margin-left: 12px;
-  opacity: 0.5;
-}
-
-.guide-subtopic[open] > summary::after {
-  transform: rotate(-135deg);
-}
-
-.guide-subtopic > summary:hover {
-  color: var(--primary);
+.guide-sub-row:hover {
   background: var(--surface-alt);
 }
 
-.guide-subtopic[open] > summary {
-  color: var(--primary);
-  border-bottom: 1px solid var(--border);
-}
-
-/* Subtopic content */
-.guide-subtopic-body {
-  padding: 16px 20px;
-}
-
-.guide-subtopic-body p {
-  color: var(--text-secondary);
-  font-size: 15px;
-  line-height: 1.7;
-  margin-bottom: 10px;
-}
-
-.guide-subtopic-body p:last-child {
-  margin-bottom: 0;
-}
-
-.guide-subtopic-body ul,
-.guide-subtopic-body ol {
-  color: var(--text-secondary);
-  font-size: 15px;
-  line-height: 1.7;
-  padding-left: 20px;
-  margin-bottom: 10px;
-}
-
-.guide-subtopic-body ul:last-child,
-.guide-subtopic-body ol:last-child {
-  margin-bottom: 0;
-}
-
-.guide-subtopic-body li {
-  margin-bottom: 6px;
-}
-
-.guide-subtopic-body li:last-child {
-  margin-bottom: 0;
-}
-
-.guide-subtopic-body ol li {
-  margin-bottom: 10px;
-  padding-left: 4px;
-}
-
-.guide-subtopic-body code {
-  background: var(--surface-alt);
-  padding: 2px 7px;
-  border-radius: 5px;
+.guide-sub-label {
   font-size: 14px;
-  color: var(--primary);
+  font-weight: 700;
+  color: var(--text);
 }
 
-/* CTA at bottom */
-.guide-cta {
-  max-width: 720px;
-  margin: 48px auto 0;
-  text-align: center;
-  background: var(--surface-alt);
-  border-radius: 16px;
-  padding: 48px 32px;
+.guide-chevron-sub {
+  font-size: 16px;
+  color: #94A3B8;
+  line-height: 1;
 }
 
-.guide-cta h2 {
-  font-size: 24px;
+/* Subtopic content (hidden by default) */
+.guide-sub-content {
+  display: none;
+  padding: 4px 16px 4px 16px;
+}
+
+.guide-sub-content p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.7;
   margin-bottom: 8px;
 }
 
-.guide-cta p {
+.guide-sub-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Direct content for topics without subtopics */
+.guide-direct {
+  padding: 4px 16px;
+}
+
+.guide-direct p {
   color: var(--text-secondary);
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.guide-direct p:last-child {
+  margin-bottom: 0;
+}
+
+/* Warning text (Delete All Data) */
+.guide-warning {
+  color: #EF4444 !important;
+}
+
+/* Send Feedback button */
+.guide-feedback {
+  max-width: 640px;
+  margin: 24px auto 0;
+}
+
+.guide-feedback-btn {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
 }
 
 /* Guide responsive */
 @media (max-width: 640px) {
-  .guide-topic > summary {
-    padding: 16px 20px;
-    font-size: 16px;
+  .guide-page {
+    padding: 110px 0 60px;
   }
 
-  .guide-topic-body {
-    padding: 4px 16px 16px;
+  .guide-topic-row {
+    padding: 13px 14px;
   }
 
-  .guide-subtopic > summary {
-    padding: 12px 16px;
-    font-size: 14px;
+  .guide-topic-label {
+    font-size: 15px;
   }
 
-  .guide-subtopic-body {
-    padding: 14px 16px;
+  .guide-sub-row {
+    padding: 11px 12px;
   }
 
-  .guide-cta {
-    padding: 36px 24px;
+  .guide-sub-label {
+    font-size: 13px;
+  }
+
+  .guide-sub-content p,
+  .guide-direct p {
+    font-size: 13px;
   }
 }

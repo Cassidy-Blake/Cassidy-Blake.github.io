@@ -36,393 +36,410 @@
   <section class="guide-page">
     <div class="container">
       <div class="guide-header">
-        <div class="contact-icon-circle">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-        </div>
         <h1>Guide</h1>
-        <p>Everything you need to know about using Auto Tip Map.</p>
       </div>
 
-      <div class="guide-accordion">
+      <div class="guide-list">
 
-        <!-- Importing Data -->
-        <details class="guide-topic">
-          <summary>Importing Data</summary>
-          <div class="guide-topic-body">
+        <!-- ═══ TOPIC: Importing Data ═══ -->
+        <div class="guide-topic-row" onclick="toggleSection('ImportingData')">
+          <span class="guide-topic-label">Importing Data</span>
+          <span class="guide-chevron" id="ImportingDataChevron">&#x25B8;</span>
+        </div>
+        <div class="guide-topic-content" id="ImportingDataContent">
 
-            <details class="guide-subtopic">
-              <summary>Google Maps Import</summary>
-              <div class="guide-subtopic-body">
-                <p>You can import your delivery history from Google Maps using Google Takeout. Here's how:</p>
-                <ol>
-                  <li>Open your web browser and go to <a href="https://takeout.google.com" target="_blank" rel="noopener">Google Takeout</a>.</li>
-                  <li>Scroll through the list and find <strong>"Maps."</strong> Make sure its checkbox is checked and it says "1 selected" at the top. If other items are checked, uncheck them &mdash; exporting extra data will take much longer. Tap <strong>"Next step."</strong></li>
-                  <li>Make sure <strong>"Send download link via email"</strong> and <strong>"Export once"</strong> are selected. Tap <strong>"Create export."</strong></li>
-                  <li>Google will prepare your file. This is usually almost instant, but can sometimes take a little while. You'll receive an email when it's ready.</li>
-                  <li>Open the email titled <strong>"Your Google data is ready to download."</strong> Tap the link and download the .zip file to your phone. It's usually named something like <code>takeout-maps.zip</code>.</li>
-                  <li>Return to Auto Tip Map and go to <strong>Settings &gt; Data Management &gt; Import Data</strong>. Select <strong>"Google Maps Backup"</strong> and choose the .zip file you downloaded.</li>
-                </ol>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Backup Import</summary>
-              <div class="guide-subtopic-body">
-                <p>If you've previously exported a backup from Auto Tip Map, you can restore it by going to <strong>Settings &gt; Data Management &gt; Import Data</strong>, then select <strong>"Auto Tip Map Backup"</strong> and choose your <code>.atm</code> backup file. This will import all of your saved addresses, orders, and tip data.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Screenshot Import</summary>
-              <div class="guide-subtopic-body">
-                <p>Screenshot import is coming soon. This feature will allow you to import order and tip data from screenshots.</p>
-              </div>
-            </details>
-
+          <div class="guide-sub-row" onclick="toggleSection('GoogleMapsImport')">
+            <span class="guide-sub-label">Google Maps Import</span>
+            <span class="guide-chevron-sub" id="GoogleMapsImportChevron">&#x25B8;</span>
           </div>
-        </details>
-
-        <!-- Backing Up Data -->
-        <details class="guide-topic">
-          <summary>Backing Up Data</summary>
-          <div class="guide-topic-body">
-            <div class="guide-direct-content">
-              <p>To back up your data, go to <strong>Settings &gt; Data Management</strong> and tap <strong>"Export Backup."</strong> This will save all of your addresses, orders, tips, and other data to a <code>.atm</code> file on your device. You can use this file to restore your data later or transfer it to another device.</p>
-            </div>
+          <div class="guide-sub-content" id="GoogleMapsImportContent">
+            <p>You can import your delivery history from Google Maps using Google Takeout. Here's how:</p>
+            <p>1. Open your web browser and go to <a href="https://takeout.google.com" target="_blank" rel="noopener">Google Takeout</a>.</p>
+            <p>2. Scroll through the list and find "Maps." Make sure its checkbox is checked and it says "1 selected" at the top. If other items are checked, uncheck them &mdash; exporting extra data will take much longer. Tap "Next step."</p>
+            <p>3. Make sure "Send download link via email" and "Export once" are selected. Tap "Create export."</p>
+            <p>4. Google will prepare your file. This is usually almost instant, but can sometimes take a little while. You'll receive an email when it's ready.</p>
+            <p>5. Open the email titled "Your Google data is ready to download." Tap the link and download the .zip file to your phone. It's usually named something like "takeout-maps.zip."</p>
+            <p>6. Return to Auto Tip Map and go to Settings &gt; Data Management &gt; Import Data. Select "Google Maps Backup" and choose the .zip file you downloaded.</p>
           </div>
-        </details>
 
-        <!-- Automatic Data Capture -->
-        <details class="guide-topic">
-          <summary>Automatic Data Capture</summary>
-          <div class="guide-topic-body">
-
-            <details class="guide-subtopic">
-              <summary>Tip Capture</summary>
-              <div class="guide-subtopic-body">
-                <p>Auto Tip Map can automatically capture tips in two ways:</p>
-                <ul>
-                  <li><strong>Overlay Capture</strong> &mdash; When the overlay is running, Auto Tip Map detects tips in real time and saves them automatically.</li>
-                  <li><strong>Background Capture</strong> &mdash; When enabled in Settings, Auto Tip Map listens for tip notifications from your delivery app even when the app is closed. Any tips that come through as notifications are automatically saved. You can enable or disable this in <strong>Settings &gt; App Behavior</strong>.</li>
-                </ul>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Order Capture</summary>
-              <div class="guide-subtopic-body">
-                <p>When the overlay is running, Auto Tip Map automatically detects delivery orders in real time. When a new order is found, the app saves the order number, address, and other details. You'll see a brief confirmation popup when an order is captured.</p>
-              </div>
-            </details>
-
+          <div class="guide-sub-row" onclick="toggleSection('BackupImport')">
+            <span class="guide-sub-label">Backup Import</span>
+            <span class="guide-chevron-sub" id="BackupImportChevron">&#x25B8;</span>
           </div>
-        </details>
-
-        <!-- Map -->
-        <details class="guide-topic">
-          <summary>Map</summary>
-          <div class="guide-topic-body">
-
-            <details class="guide-subtopic">
-              <summary>Heatmap</summary>
-              <div class="guide-subtopic-body">
-                <p>When you zoom out on the map, nearby addresses are grouped together into colored bubbles. Each bubble's color represents the average tip rating for addresses in that area. Colors range from <span class="tip-none">red</span> (no tips) through <span class="tip-poor">orange</span> and <span class="tip-avg">yellow</span> to <span class="tip-great">green</span> (great tips). This gives you a quick visual overview of which areas tend to tip well.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Pins</summary>
-              <div class="guide-subtopic-body">
-                <p>Each address on your map is shown as a colored pin. You can tap any pin to see a popup with the address details, including how many times you've delivered there and the average tip. Tap the address in the popup to open the full order history for that location.</p>
-              </div>
-            </details>
-
+          <div class="guide-sub-content" id="BackupImportContent">
+            <p>If you've previously exported a backup from Auto Tip Map, you can restore it by going to Settings &gt; Data Management &gt; Import Data, then select "Auto Tip Map Backup" and choose your .atm backup file. This will import all of your saved addresses, orders, and tip data.</p>
           </div>
-        </details>
 
-        <!-- Overlay -->
-        <details class="guide-topic">
-          <summary>Overlay</summary>
-          <div class="guide-topic-body">
-
-            <details class="guide-subtopic">
-              <summary>Order Notifications</summary>
-              <div class="guide-subtopic-body">
-                <p>When the overlay is running and a new order is detected, a brief popup appears near the overlay bubble confirming that the order has been saved. This notification fades away automatically after a couple of seconds.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Tip Notifications</summary>
-              <div class="guide-subtopic-body">
-                <p>When a tip is detected and logged &mdash; either through the overlay or background capture &mdash; a brief popup appears confirming that the tip has been saved. This notification fades away automatically after a couple of seconds.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Offer Screen</summary>
-              <div class="guide-subtopic-body">
-                <p>When the overlay detects a delivery offer on your screen, it shows a popup with information about the address from your order history. This helps you decide whether to accept the offer. The popup will show one of the following:</p>
-                <ul>
-                  <li><strong>New Customer</strong> &mdash; the address has never been seen before</li>
-                  <li><strong>No Order History</strong> &mdash; the address is known but has no past orders</li>
-                  <li><strong>Order history details</strong> &mdash; number of past orders, average tip amount and percentage, and a color-coded tip rating (<span class="tip-none">No Tip</span>, <span class="tip-poor">Poor</span>, <span class="tip-avg">Average</span>, <span class="tip-good">Good</span>, or <span class="tip-great">Great</span>)</li>
-                </ul>
-                <p>If you've added notes to an address, a sticky note icon will appear. Tap it to view your notes.</p>
-                <p>The popup is draggable &mdash; tap and hold to move it anywhere on your screen. It appears automatically when an offer is detected and disappears when you leave the offer screen. If multiple addresses are visible, all of them will be shown.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Capture Paused</summary>
-              <div class="guide-subtopic-body">
-                <p>If the overlay is interrupted (for example, if your screen locks), capture will pause. The overlay button on the home screen will show "Paused" to let you know. You can resume capture by unlocking your screen and tapping the resume prompt, or by restarting the overlay from the home screen.</p>
-              </div>
-            </details>
-
+          <div class="guide-sub-row" onclick="toggleSection('ScreenshotImport')">
+            <span class="guide-sub-label">Screenshot Import</span>
+            <span class="guide-chevron-sub" id="ScreenshotImportChevron">&#x25B8;</span>
           </div>
-        </details>
-
-        <!-- Time Tracking -->
-        <details class="guide-topic">
-          <summary>Time Tracking</summary>
-          <div class="guide-topic-body">
-
-            <details class="guide-subtopic">
-              <summary>Enabling / Disabling</summary>
-              <div class="guide-subtopic-body">
-                <p>Time Tracking is an optional feature. To turn it on or off, go to <strong>Settings &gt; App Behavior</strong> and use the Time Tracking toggle.</p>
-                <p>When enabled, a time tracking button appears on the home screen, the Time Tracking page becomes available in the sidebar menu, and the Hours and Hourly Rate cards appear on the Stats page. When disabled, all of these features are hidden.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Starting / Stopping</summary>
-              <div class="guide-subtopic-body">
-                <p>You can start tracking your work time from the home screen by tapping <strong>"Start Time Tracking."</strong> While tracking, the button changes to <strong>"Stop Time Tracking"</strong> and shows how long you've been working. Tap it again to stop. Time Tracking must be enabled in <strong>Settings &gt; App Behavior</strong> to see this button.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Manually Adding Entries</summary>
-              <div class="guide-subtopic-body">
-                <p>To manually add a work shift, open the Time Tracking page from the sidebar menu and tap <strong>"+ Add Shift."</strong> Enter the start and end times for your shift.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Editing Entries</summary>
-              <div class="guide-subtopic-body">
-                <p>To edit an existing time entry, go to the Time Tracking page and tap on the shift you want to change. You can adjust the start and end times.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Deleting Entries</summary>
-              <div class="guide-subtopic-body">
-                <p>To delete a time entry, go to the Time Tracking page, tap on the shift you want to remove, and select the delete option.</p>
-              </div>
-            </details>
-
+          <div class="guide-sub-content" id="ScreenshotImportContent">
+            <p>Screenshot import is coming soon. This feature will allow you to import order and tip data from screenshots.</p>
           </div>
-        </details>
 
-        <!-- Order History -->
-        <details class="guide-topic">
-          <summary>Order History</summary>
-          <div class="guide-topic-body">
+        </div>
 
-            <details class="guide-subtopic">
-              <summary>Sorting &amp; Filtering</summary>
-              <div class="guide-subtopic-body">
-                <p>In Order History, you can filter your addresses by date range using the buttons near the top of the page: <strong>Today</strong>, <strong>Yesterday</strong>, <strong>7 Days</strong>, or <strong>Custom</strong> (which lets you choose your own start and end dates).</p>
-                <p>You can also toggle between <strong>Order Date</strong> and <strong>Tip Date</strong> using the toggle at the top. Order Date filters by when the order was placed, while Tip Date filters by when the tip was received.</p>
-                <p>To sort your addresses, use the sort button in the search bar. Sort options include:</p>
-                <ul>
-                  <li><strong>Tip Rating</strong> &mdash; sort by how well each address tips</li>
-                  <li><strong>Most Recent</strong> &mdash; sort by the date of the most recent order</li>
-                  <li><strong>Last Updated</strong> &mdash; sort by when the address was last modified</li>
-                </ul>
-                <p>You can also toggle between ascending and descending order using the arrow button next to the sort menu.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Tip Rating</summary>
-              <div class="guide-subtopic-body">
-                <p>Each address is assigned a color-coded tip rating:</p>
-                <div class="tip-legend" style="margin: 12px 0;">
-                  <span class="tip-badge tip-great">Great</span>
-                  <span class="tip-badge tip-good">Good</span>
-                  <span class="tip-badge tip-avg">Average</span>
-                  <span class="tip-badge tip-poor">Poor</span>
-                  <span class="tip-badge tip-none">No Tip</span>
-                </div>
-                <p>The rating is calculated based on your tip threshold settings. You can customize how tip ratings are calculated by going to <strong>Settings &gt; Data Preferences</strong>, where you can choose between percentage-based or dollar-based thresholds and adjust the cutoff values for each tier.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Adding Addresses</summary>
-              <div class="guide-subtopic-body">
-                <p>You can manually add a new address by tapping the green <strong>"+"</strong> button at the top of the Order History page. However, manual address entry is not recommended because manually entered addresses may not match correctly with automatically captured orders. For best results, let Auto Tip Map capture addresses automatically through the overlay or through your uploaded screenshots.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Adding Orders</summary>
-              <div class="guide-subtopic-body">
-                <p>To manually add an order to an existing address, open the address card in Order History and use the add order option. You can enter the order number, order amount, and tip amount.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Editing Orders</summary>
-              <div class="guide-subtopic-body">
-                <p>To edit an order, open the address card in Order History and tap on the order you want to change. You can update the order details such as the order number, amount, and tip.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Editing Addresses</summary>
-              <div class="guide-subtopic-body">
-                <p>Addresses cannot be directly edited. This is because changing an address can cause issues with automatic order matching &mdash; Auto Tip Map may not be able to correctly link future orders to a modified address.</p>
-              </div>
-            </details>
-
+        <!-- ═══ TOPIC: Backing Up Data ═══ -->
+        <div class="guide-topic-row" onclick="toggleSection('BackingUpData')">
+          <span class="guide-topic-label">Backing Up Data</span>
+          <span class="guide-chevron" id="BackingUpDataChevron">&#x25B8;</span>
+        </div>
+        <div class="guide-topic-content" id="BackingUpDataContent">
+          <div class="guide-direct">
+            <p>To back up your data, go to Settings &gt; Data Management and tap "Export Backup." This will save all of your addresses, orders, tips, and other data to a .atm file on your device. You can use this file to restore your data later or transfer it to another device.</p>
           </div>
-        </details>
+        </div>
 
-        <!-- Stats -->
-        <details class="guide-topic">
-          <summary>Stats</summary>
-          <div class="guide-topic-body">
+        <!-- ═══ TOPIC: Automatic Data Capture ═══ -->
+        <div class="guide-topic-row" onclick="toggleSection('AutoCapture')">
+          <span class="guide-topic-label">Automatic Data Capture</span>
+          <span class="guide-chevron" id="AutoCaptureChevron">&#x25B8;</span>
+        </div>
+        <div class="guide-topic-content" id="AutoCaptureContent">
 
-            <details class="guide-subtopic">
-              <summary>Date Range Filters</summary>
-              <div class="guide-subtopic-body">
-                <p>The Stats page lets you view your earnings data for different time periods. Use the date range buttons at the top to switch between:</p>
-                <ul>
-                  <li><strong>Today</strong> &mdash; stats for the current day</li>
-                  <li><strong>Yesterday</strong> &mdash; stats for the previous day</li>
-                  <li><strong>7 Days</strong> &mdash; stats for the past week</li>
-                  <li><strong>Custom</strong> &mdash; choose your own start and end dates</li>
-                </ul>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Orders Completed</summary>
-              <div class="guide-subtopic-body">
-                <p>This shows the total number of deliveries you completed during the selected time period. Tap this card to jump to Order History filtered to the same date range.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Tips for Today's Orders</summary>
-              <div class="guide-subtopic-body">
-                <p>This shows the total dollar amount of tips you received for orders placed during the selected time period. The label changes based on your selected date range (e.g., "Tips for Yesterday's Orders").</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>% of Orders Tipped</summary>
-              <div class="guide-subtopic-body">
-                <p>This shows the percentage of your orders in the selected time period that received a tip.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Bonus Total</summary>
-              <div class="guide-subtopic-body">
-                <p>This shows the total amount of bonuses you've added for the selected time period.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Hours</summary>
-              <div class="guide-subtopic-body">
-                <p>This shows the total hours you've tracked during the selected time period. This card is only visible when Time Tracking is enabled in <strong>Settings &gt; App Behavior</strong>. Tap it to go to the Time Tracking page.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Hourly Rate</summary>
-              <div class="guide-subtopic-body">
-                <p>This shows your total earnings divided by your tracked hours for the selected time period. This helps you see how much you're earning per hour. This card is only visible when Time Tracking is enabled.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Past Tips Received Today</summary>
-              <div class="guide-subtopic-body">
-                <p>This shows tips that were received during the selected time period but belong to orders from earlier dates. For example, if you delivered an order yesterday but the tip came through today, it would show up here. Tap this card for more details.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Bonuses</summary>
-              <div class="guide-subtopic-body">
-                <p>The Bonuses section at the bottom of the Stats page lets you track extra earnings like peak pay, challenges, or other bonuses. Tap <strong>"+ Add Bonus"</strong> to log a new bonus with an amount and date. You can tap an existing bonus to edit or delete it.</p>
-              </div>
-            </details>
-
+          <div class="guide-sub-row" onclick="toggleSection('TipCapture')">
+            <span class="guide-sub-label">Tip Capture</span>
+            <span class="guide-chevron-sub" id="TipCaptureChevron">&#x25B8;</span>
           </div>
-        </details>
-
-        <!-- Settings -->
-        <details class="guide-topic">
-          <summary>Settings</summary>
-          <div class="guide-topic-body">
-
-            <details class="guide-subtopic">
-              <summary>Appearance</summary>
-              <div class="guide-subtopic-body">
-                <p><strong>App Theme</strong> controls the overall look of the app. You can choose System (follows your phone's setting), Light, or Dark.</p>
-                <p><strong>Overlay Theme</strong> controls the appearance of the overlay popup that appears over other apps. You can choose Light, Dark, or System. Light is recommended since most delivery apps use a light background.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Data Preferences</summary>
-              <div class="guide-subtopic-body">
-                <p><strong>Tip Counting Preference</strong> lets you choose how tips are counted in your stats:</p>
-                <ul>
-                  <li><strong>Order Date</strong> &mdash; tips are counted based on when the order was placed</li>
-                  <li><strong>Tip Date</strong> &mdash; tips are counted based on when the tip was received</li>
-                </ul>
-                <p><strong>Tip Rating Thresholds</strong> let you customize what counts as a "poor," "average," "good," or "great" tip. You can choose between Percentage (based on tip as a percent of order amount) or Dollar Amount (based on the raw tip value). Drag the sliders to adjust the cutoff for each tier.</p>
-                <p>Tap <strong>"Save &amp; Recalculate"</strong> to apply your changes and update all existing tip ratings across your data. Tap <strong>"Reset to Defaults"</strong> to restore the original threshold values.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>App Behavior</summary>
-              <div class="guide-subtopic-body">
-                <p><strong>Background Tip Capture:</strong> When enabled, Auto Tip Map listens for tip notifications from your delivery app even when the app is closed. This requires notification access permission. If disabled, tips will only be captured while the overlay is running.</p>
-                <p><strong>Time Tracking:</strong> When enabled, a time tracking button appears on the home screen and the Time Tracking page becomes available in the sidebar menu. When disabled, these features are hidden.</p>
-              </div>
-            </details>
-
-            <details class="guide-subtopic">
-              <summary>Data Management</summary>
-              <div class="guide-subtopic-body">
-                <p><strong>Export Backup</strong> saves all of your data to a <code>.atm</code> backup file on your device. Use this regularly to keep a safe copy of your data.</p>
-                <p><strong>Import Data</strong> lets you bring in data from a Google Maps export, a previous Auto Tip Map backup, or screenshots.</p>
-                <p><strong>Delete All Data</strong> permanently erases all of your addresses, orders, tips, and other saved data. This action cannot be undone.</p>
-              </div>
-            </details>
-
+          <div class="guide-sub-content" id="TipCaptureContent">
+            <p>Auto Tip Map can automatically capture tips in two ways:</p>
+            <p>Overlay Capture &mdash; When the overlay is running, Auto Tip Map detects tips in real time and saves them automatically.</p>
+            <p>Background Capture &mdash; When enabled in Settings, Auto Tip Map listens for tip notifications from your delivery app even when the app is closed. Any tips that come through as notifications are automatically saved. You can enable or disable this in Settings &gt; App Behavior.</p>
           </div>
-        </details>
+
+          <div class="guide-sub-row" onclick="toggleSection('OrderCapture')">
+            <span class="guide-sub-label">Order Capture</span>
+            <span class="guide-chevron-sub" id="OrderCaptureChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="OrderCaptureContent">
+            <p>When the overlay is running, Auto Tip Map automatically detects delivery orders in real time. When a new order is found, the app saves the order number, address, and other details. You'll see a brief confirmation popup when an order is captured.</p>
+          </div>
+
+        </div>
+
+        <!-- ═══ TOPIC: Map ═══ -->
+        <div class="guide-topic-row" onclick="toggleSection('MapTopic')">
+          <span class="guide-topic-label">Map</span>
+          <span class="guide-chevron" id="MapTopicChevron">&#x25B8;</span>
+        </div>
+        <div class="guide-topic-content" id="MapTopicContent">
+
+          <div class="guide-sub-row" onclick="toggleSection('Heatmap')">
+            <span class="guide-sub-label">Heatmap</span>
+            <span class="guide-chevron-sub" id="HeatmapChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="HeatmapContent">
+            <p>When you zoom out on the map, nearby addresses are grouped together into colored bubbles. Each bubble's color represents the average tip rating for addresses in that area. Colors range from red (no tips) through orange and yellow to green (great tips). This gives you a quick visual overview of which areas tend to tip well.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('MapPins')">
+            <span class="guide-sub-label">Pins</span>
+            <span class="guide-chevron-sub" id="MapPinsChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="MapPinsContent">
+            <p>Each address on your map is shown as a colored pin. You can tap any pin to see a popup with the address details, including how many times you've delivered there and the average tip. Tap the address in the popup to open the full order history for that location.</p>
+          </div>
+
+        </div>
+
+        <!-- ═══ TOPIC: Overlay ═══ -->
+        <div class="guide-topic-row" onclick="toggleSection('OverlayTopic')">
+          <span class="guide-topic-label">Overlay</span>
+          <span class="guide-chevron" id="OverlayTopicChevron">&#x25B8;</span>
+        </div>
+        <div class="guide-topic-content" id="OverlayTopicContent">
+
+          <div class="guide-sub-row" onclick="toggleSection('OrderNotifications')">
+            <span class="guide-sub-label">Order Notifications</span>
+            <span class="guide-chevron-sub" id="OrderNotificationsChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="OrderNotificationsContent">
+            <p>When the overlay is running and a new order is detected, a brief popup appears near the overlay bubble confirming that the order has been saved. This notification fades away automatically after a couple of seconds.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('TipNotifications')">
+            <span class="guide-sub-label">Tip Notifications</span>
+            <span class="guide-chevron-sub" id="TipNotificationsChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="TipNotificationsContent">
+            <p>When a tip is detected and logged &mdash; either through the overlay or background capture &mdash; a brief popup appears confirming that the tip has been saved. This notification fades away automatically after a couple of seconds.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('OfferScreen')">
+            <span class="guide-sub-label">Offer Screen</span>
+            <span class="guide-chevron-sub" id="OfferScreenChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="OfferScreenContent">
+            <p>When the overlay detects a delivery offer on your screen, it shows a popup with information about the address from your order history.</p>
+            <p>This helps you decide whether to accept the offer. The popup will show one of the following:</p>
+            <p>&bull; New Customer &mdash; the address has never been seen before</p>
+            <p>&bull; No Order History &mdash; the address is known but has no past orders</p>
+            <p>&bull; Order history details &mdash; number of past orders, average tip amount and percentage, and a color-coded tip rating (No Tip, Poor, Average, Good, or Great)</p>
+            <p>If you've added notes to an address, a sticky note icon will appear. Tap it to view your notes.</p>
+            <p>The popup is draggable &mdash; tap and hold to move it anywhere on your screen.</p>
+            <p>It appears automatically when an offer is detected and disappears when you leave the offer screen. If multiple addresses are visible, all of them will be shown.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('CapturePaused')">
+            <span class="guide-sub-label">Capture Paused</span>
+            <span class="guide-chevron-sub" id="CapturePausedChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="CapturePausedContent">
+            <p>If the overlay is interrupted (for example, if your screen locks), capture will pause. The overlay button on the home screen will show "Paused" to let you know. You can resume capture by unlocking your screen and tapping the resume prompt, or by restarting the overlay from the home screen.</p>
+          </div>
+
+        </div>
+
+        <!-- ═══ TOPIC: Time Tracking ═══ -->
+        <div class="guide-topic-row" onclick="toggleSection('TimeTrackingTopic')">
+          <span class="guide-topic-label">Time Tracking</span>
+          <span class="guide-chevron" id="TimeTrackingTopicChevron">&#x25B8;</span>
+        </div>
+        <div class="guide-topic-content" id="TimeTrackingTopicContent">
+
+          <div class="guide-sub-row" onclick="toggleSection('EnableDisableTracking')">
+            <span class="guide-sub-label">Enabling/Disabling Time Tracking</span>
+            <span class="guide-chevron-sub" id="EnableDisableTrackingChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="EnableDisableTrackingContent">
+            <p>Time Tracking is an optional feature. To turn it on or off, go to Settings &gt; App Behavior and use the Time Tracking toggle.</p>
+            <p>When enabled, a time tracking button appears on the home screen, the Time Tracking page becomes available in the sidebar menu, and the Hours and Hourly Rate cards appear on the Stats page.</p>
+            <p>When disabled, all of these features are hidden.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('StartStopTracking')">
+            <span class="guide-sub-label">Starting/Stopping Time Tracking</span>
+            <span class="guide-chevron-sub" id="StartStopTrackingChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="StartStopTrackingContent">
+            <p>You can start tracking your work time from the home screen by tapping the "Start Time Tracking" button. While tracking, the button changes to "Stop Time Tracking" and shows how long you've been working. Tap it again to stop. Time Tracking must be enabled in Settings &gt; App Behavior to see this button.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('ManualEntries')">
+            <span class="guide-sub-label">Manually Adding Entries</span>
+            <span class="guide-chevron-sub" id="ManualEntriesChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="ManualEntriesContent">
+            <p>To manually add a work shift, open the Time Tracking page from the sidebar menu and tap "+ Add Shift." Enter the start and end times for your shift.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('EditingEntries')">
+            <span class="guide-sub-label">Editing Entries</span>
+            <span class="guide-chevron-sub" id="EditingEntriesChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="EditingEntriesContent">
+            <p>To edit an existing time entry, go to the Time Tracking page and tap on the shift you want to change. You can adjust the start and end times.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('DeletingEntries')">
+            <span class="guide-sub-label">Deleting Entries</span>
+            <span class="guide-chevron-sub" id="DeletingEntriesChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="DeletingEntriesContent">
+            <p>To delete a time entry, go to the Time Tracking page, tap on the shift you want to remove, and select the delete option.</p>
+          </div>
+
+        </div>
+
+        <!-- ═══ TOPIC: Order History ═══ -->
+        <div class="guide-topic-row" onclick="toggleSection('OrderHistoryTopic')">
+          <span class="guide-topic-label">Order History</span>
+          <span class="guide-chevron" id="OrderHistoryTopicChevron">&#x25B8;</span>
+        </div>
+        <div class="guide-topic-content" id="OrderHistoryTopicContent">
+
+          <div class="guide-sub-row" onclick="toggleSection('OHSortFunctions')">
+            <span class="guide-sub-label">Sort Functions</span>
+            <span class="guide-chevron-sub" id="OHSortFunctionsChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="OHSortFunctionsContent">
+            <p>In Order History, you can filter your addresses by date range using the buttons near the top of the page: Today, Yesterday, 7 Days, or Custom (which lets you choose your own start and end dates).</p>
+            <p>You can also toggle between Order Date and Tip Date using the toggle at the top. Order Date filters by when the order was placed, while Tip Date filters by when the tip was received.</p>
+            <p>To sort your addresses, use the sort button in the search bar. Sort options include:</p>
+            <p>&bull; Tip Rating &mdash; sort by how well each address tips<br>&bull; Most Recent &mdash; sort by the date of the most recent order<br>&bull; Last Updated &mdash; sort by when the address was last modified</p>
+            <p>You can also toggle between ascending and descending order using the arrow button next to the sort menu.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('TipRating')">
+            <span class="guide-sub-label">Tip Rating</span>
+            <span class="guide-chevron-sub" id="TipRatingChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="TipRatingContent">
+            <p>Each address is assigned a color-coded tip rating:</p>
+            <p>&bull; <span style="color:#FF4444">Red</span> &mdash; No tip<br>&bull; <span style="color:#FF6B35">Orange</span> &mdash; Poor<br>&bull; <span style="color:#B8960F">Yellow</span> &mdash; Average<br>&bull; <span style="color:#9ACD32">Yellow-Green</span> &mdash; Good<br>&bull; <span style="color:#4CAF50">Green</span> &mdash; Great</p>
+            <p>The rating is calculated based on your tip threshold settings. You can customize how tip ratings are calculated by going to Settings &gt; Data Preferences, where you can choose between percentage-based or dollar-based thresholds and adjust the cutoff values for each tier.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('AddingAddresses')">
+            <span class="guide-sub-label">Adding Addresses</span>
+            <span class="guide-chevron-sub" id="AddingAddressesChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="AddingAddressesContent">
+            <p>You can manually add a new address by tapping the green "+" button at the top of the Order History page. However, manual address entry is not recommended because manually entered addresses may not match correctly with automatically captured orders. For best results, let Auto Tip Map capture addresses automatically through the overlay or through your uploaded screenshots.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('AddingOrders')">
+            <span class="guide-sub-label">Adding Orders</span>
+            <span class="guide-chevron-sub" id="AddingOrdersChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="AddingOrdersContent">
+            <p>To manually add an order to an existing address, open the address card in Order History and use the add order option. You can enter the order number, order amount, and tip amount.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('EditingOrders')">
+            <span class="guide-sub-label">Editing Orders</span>
+            <span class="guide-chevron-sub" id="EditingOrdersChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="EditingOrdersContent">
+            <p>To edit an order, open the address card in Order History and tap on the order you want to change. You can update the order details such as the order number, amount, and tip.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('EditingAddresses')">
+            <span class="guide-sub-label">Editing Addresses</span>
+            <span class="guide-chevron-sub" id="EditingAddressesChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="EditingAddressesContent">
+            <p>Addresses cannot be directly edited. This is because changing an address can cause issues with automatic order matching &mdash; Auto Tip Map may not be able to correctly link future orders to a modified address.</p>
+          </div>
+
+        </div>
+
+        <!-- ═══ TOPIC: Stats ═══ -->
+        <div class="guide-topic-row" onclick="toggleSection('StatsTopic')">
+          <span class="guide-topic-label">Stats</span>
+          <span class="guide-chevron" id="StatsTopicChevron">&#x25B8;</span>
+        </div>
+        <div class="guide-topic-content" id="StatsTopicContent">
+
+          <div class="guide-sub-row" onclick="toggleSection('StatsSortFunctions')">
+            <span class="guide-sub-label">Date Range Filters</span>
+            <span class="guide-chevron-sub" id="StatsSortFunctionsChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="StatsSortFunctionsContent">
+            <p>The Stats page lets you view your earnings data for different time periods. Use the date range buttons at the top to switch between:</p>
+            <p>&bull; Today &mdash; stats for the current day<br>&bull; Yesterday &mdash; stats for the previous day<br>&bull; 7 Days &mdash; stats for the past week<br>&bull; Custom &mdash; choose your own start and end dates</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('OrdersCompleted')">
+            <span class="guide-sub-label">Orders Completed</span>
+            <span class="guide-chevron-sub" id="OrdersCompletedChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="OrdersCompletedContent">
+            <p>This shows the total number of deliveries you completed during the selected time period. Tap this card to jump to Order History filtered to the same date range.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('TipsForOrders')">
+            <span class="guide-sub-label">Tips for Today's Orders</span>
+            <span class="guide-chevron-sub" id="TipsForOrdersChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="TipsForOrdersContent">
+            <p>This shows the total dollar amount of tips you received for orders placed during the selected time period. The label changes based on your selected date range (e.g., "Tips for Yesterday's Orders").</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('PercentTipped')">
+            <span class="guide-sub-label">% of Orders Tipped</span>
+            <span class="guide-chevron-sub" id="PercentTippedChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="PercentTippedContent">
+            <p>This shows the percentage of your orders in the selected time period that received a tip.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('BonusTotal')">
+            <span class="guide-sub-label">Bonus Total</span>
+            <span class="guide-chevron-sub" id="BonusTotalChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="BonusTotalContent">
+            <p>This shows the total amount of bonuses you've added for the selected time period.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('StatsHours')">
+            <span class="guide-sub-label">Hours</span>
+            <span class="guide-chevron-sub" id="StatsHoursChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="StatsHoursContent">
+            <p>This shows the total hours you've tracked during the selected time period. This card is only visible when Time Tracking is enabled in Settings &gt; App Behavior. Tap it to go to the Time Tracking page.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('StatsHourlyRate')">
+            <span class="guide-sub-label">Hourly Rate</span>
+            <span class="guide-chevron-sub" id="StatsHourlyRateChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="StatsHourlyRateContent">
+            <p>This shows your total earnings divided by your tracked hours for the selected time period. This helps you see how much you're earning per hour. This card is only visible when Time Tracking is enabled.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('PastTipsReceived')">
+            <span class="guide-sub-label">Past Tips Received Today</span>
+            <span class="guide-chevron-sub" id="PastTipsReceivedChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="PastTipsReceivedContent">
+            <p>This shows tips that were received during the selected time period but belong to orders from earlier dates. For example, if you delivered an order yesterday but the tip came through today, it would show up here. Tap this card for more details.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('StatsBonuses')">
+            <span class="guide-sub-label">Bonuses</span>
+            <span class="guide-chevron-sub" id="StatsBonusesChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="StatsBonusesContent">
+            <p>The Bonuses section at the bottom of the Stats page lets you track extra earnings like peak pay, challenges, or other bonuses. Tap "+ Add Bonus" to log a new bonus with an amount and date. You can tap an existing bonus to edit or delete it.</p>
+          </div>
+
+        </div>
+
+        <!-- ═══ TOPIC: Settings ═══ -->
+        <div class="guide-topic-row" onclick="toggleSection('SettingsTopic')">
+          <span class="guide-topic-label">Settings</span>
+          <span class="guide-chevron" id="SettingsTopicChevron">&#x25B8;</span>
+        </div>
+        <div class="guide-topic-content" id="SettingsTopicContent">
+
+          <div class="guide-sub-row" onclick="toggleSection('SettingsAppearance')">
+            <span class="guide-sub-label">Appearance</span>
+            <span class="guide-chevron-sub" id="SettingsAppearanceChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="SettingsAppearanceContent">
+            <p>App Theme controls the overall look of the app. You can choose System (follows your phone's setting), Light, or Dark.</p>
+            <p>Overlay Theme controls the appearance of the overlay popup that appears over other apps. You can choose Light, Dark, or System. Light is recommended since most delivery apps use a light background.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('SettingsDataPrefs')">
+            <span class="guide-sub-label">Data Preferences</span>
+            <span class="guide-chevron-sub" id="SettingsDataPrefsChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="SettingsDataPrefsContent">
+            <p>Tip Counting Preference lets you choose how tips are counted in your stats:</p>
+            <p>&bull; Order Date &mdash; tips are counted based on when the order was placed<br>&bull; Tip Date &mdash; tips are counted based on when the tip was received</p>
+            <p>Tip Rating Thresholds let you customize what counts as a "poor," "average," "good," or "great" tip. You can choose between Percentage (based on tip as a percent of order amount) or Dollar Amount (based on the raw tip value). Drag the sliders to adjust the cutoff for each tier.</p>
+            <p>Tap "Save &amp; Recalculate" to apply your changes and update all existing tip ratings across your data. Tap "Reset to Defaults" to restore the original threshold values.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('SettingsAppBehavior')">
+            <span class="guide-sub-label">App Behavior</span>
+            <span class="guide-chevron-sub" id="SettingsAppBehaviorChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="SettingsAppBehaviorContent">
+            <p>Background Tip Capture: When enabled, Auto Tip Map listens for tip notifications from your delivery app even when the app is closed. This requires notification access permission. If disabled, tips will only be captured while the overlay is running.</p>
+            <p>Time Tracking: When enabled, a time tracking button appears on the home screen and the Time Tracking page becomes available in the sidebar menu. When disabled, these features are hidden.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('SettingsDataMgmt')">
+            <span class="guide-sub-label">Data Management</span>
+            <span class="guide-chevron-sub" id="SettingsDataMgmtChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="SettingsDataMgmtContent">
+            <p>Export Backup saves all of your data to a .atm backup file on your device. Use this regularly to keep a safe copy of your data.</p>
+            <p>Import Data lets you bring in data from a Google Maps export, a previous Auto Tip Map backup, or screenshots.</p>
+            <p class="guide-warning">Delete All Data permanently erases all of your addresses, orders, tips, and other saved data. This action cannot be undone.</p>
+          </div>
+
+        </div>
 
       </div>
 
-      <!-- Still need help? -->
-      <div class="guide-cta">
-        <h2>Still Need Help?</h2>
-        <p>Can't find what you're looking for? We're happy to help.</p>
-        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+      <!-- Contact CTA -->
+      <div class="guide-feedback">
+        <a href="contact.html" class="btn btn-primary btn-lg guide-feedback-btn">Send Feedback</a>
       </div>
 
     </div>
@@ -461,6 +478,17 @@
         toggle.classList.remove('active');
       });
     });
+
+    // Toggle section visibility (matches app behavior)
+    function toggleSection(key) {
+      const content = document.getElementById(key + 'Content');
+      const chevron = document.getElementById(key + 'Chevron');
+      if (content && chevron) {
+        const isOpen = content.style.display === 'block';
+        content.style.display = isOpen ? 'none' : 'block';
+        chevron.textContent = isOpen ? '\u25B8' : '\u25BE';
+      }
+    }
   </script>
 
 </body>
