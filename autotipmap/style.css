@@ -1114,13 +1114,13 @@ img {
 /* Download section tester button */
 .download-tester-btn {
   margin-top: 12px;
-  border-color: #fff;
-  color: #fff !important;
+  border-color: var(--primary);
+  color: var(--primary) !important;
 }
 
 .download-tester-btn:hover {
-  background: #fff;
-  color: var(--primary) !important;
+  background: var(--primary);
+  color: #fff !important;
 }
 
 /* ===== Tester Page ===== */
