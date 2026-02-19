@@ -1069,3 +1069,234 @@ img {
     font-size: 13px;
   }
 }
+
+/* ===== Tester CTA (Landing Page) ===== */
+.tester-cta {
+  padding: 80px 0;
+}
+
+.tester-cta-card {
+  text-align: center;
+  background: linear-gradient(160deg, #EEF2FF 0%, #E0E7FF 50%, #C7D2FE 100%);
+  border: 2px solid var(--secondary);
+  border-radius: 20px;
+  padding: 56px 40px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.tester-cta-badge {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.tester-cta-card h2 {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.tester-cta-card p {
+  color: var(--text-secondary);
+  font-size: 17px;
+  line-height: 1.7;
+  max-width: 540px;
+  margin: 0 auto 28px;
+}
+
+/* Download section tester button */
+.download-tester-btn {
+  margin-top: 12px;
+  border-color: #fff;
+  color: #fff !important;
+}
+
+.download-tester-btn:hover {
+  background: #fff;
+  color: var(--primary) !important;
+}
+
+/* ===== Tester Page ===== */
+.tester-hero {
+  padding: 140px 0 60px;
+  background: linear-gradient(160deg, #FAFAF9 0%, #EEF2FF 40%, #E0E7FF 70%, #C7D2FE 100%);
+  text-align: center;
+}
+
+.tester-hero-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.tester-badge {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 6px 18px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+.tester-hero h1 {
+  font-size: 40px;
+  margin-bottom: 18px;
+}
+
+.tester-hero-sub {
+  font-size: 18px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* Perks */
+.tester-perks {
+  padding: 72px 0;
+}
+
+.tester-perks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  max-width: 840px;
+  margin: 0 auto;
+}
+
+.tester-perk {
+  text-align: center;
+  padding: 32px 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tester-perk:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(79, 70, 229, 0.1);
+}
+
+.tester-perk-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--secondary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.tester-perk-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--primary);
+}
+
+.tester-perk h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.tester-perk p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* Tester form section */
+.tester-form-section {
+  padding: 0 0 80px;
+}
+
+.tester-form-card {
+  max-width: 520px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 44px 40px;
+}
+
+.tester-form-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.tester-form-header h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.tester-form-header p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.form-required {
+  color: var(--error);
+}
+
+.form-optional {
+  color: #94A3B8;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.tester-form-note {
+  text-align: center;
+  font-size: 12px;
+  color: #94A3B8;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+
+/* Tester responsive */
+@media (max-width: 900px) {
+  .tester-perks-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .tester-hero {
+    padding: 120px 0 48px;
+  }
+
+  .tester-hero h1 {
+    font-size: 28px;
+  }
+
+  .tester-hero-sub {
+    font-size: 16px;
+  }
+
+  .tester-form-card {
+    padding: 32px 24px;
+  }
+
+  .tester-cta-card {
+    padding: 40px 24px;
+  }
+
+  .tester-cta-card h2 {
+    font-size: 24px;
+  }
+
+  .tester-cta-card p {
+    font-size: 15px;
+  }
+}

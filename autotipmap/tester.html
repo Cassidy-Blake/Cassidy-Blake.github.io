@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Become a Tester - Auto Tip Map</title>
+  <meta name="description" content="Join the exclusive Auto Tip Map closed beta. Only 50 spots available. Selected testers get free lifetime access.">
+  <link rel="icon" type="image/png" href="assets/images/ATMIcon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar scrolled">
+    <div class="container nav-container">
+      <a href="/autotipmap/" class="nav-brand">
+        <img src="assets/images/ATMIcon.png" alt="Auto Tip Map icon" class="nav-icon">
+        <span>Auto Tip Map</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/autotipmap/#how-it-works">How It Works</a></li>
+        <li><a href="/autotipmap/#features">Features</a></li>
+        <li><a href="/autotipmap/#screenshots">Screenshots</a></li>
+        <li><a href="/autotipmap/guide.html">Guide</a></li>
+        <li><a href="/autotipmap/#download" class="btn btn-sm">Get the App</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Tester Hero -->
+  <section class="tester-hero">
+    <div class="container">
+      <div class="tester-hero-inner">
+        <div class="tester-badge">Limited to 50 Testers</div>
+        <h1>Be the First to Use Auto Tip Map</h1>
+        <p class="tester-hero-sub">We're looking for <strong>50 Shipt shoppers</strong> to help us test Auto Tip Map before it launches. If selected, you'll get <strong>free access to the app for life</strong> &mdash; no strings attached.</p>
+        <a href="#tester-form" class="btn btn-primary btn-lg">Apply Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You Get -->
+  <section class="tester-perks">
+    <div class="container">
+      <div class="tester-perks-grid">
+        <div class="tester-perk">
+          <div class="tester-perk-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Early Access</h3>
+          <p>Get the app before anyone else and start building your tip history from day one.</p>
+        </div>
+        <div class="tester-perk">
+          <div class="tester-perk-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Free for Life</h3>
+          <p>Selected testers will never pay for Auto Tip Map. Not now, not ever. It's our way of saying thanks.</p>
+        </div>
+        <div class="tester-perk">
+          <div class="tester-perk-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Shape the App</h3>
+          <p>Your feedback goes directly to the developer. Help us build the features Shipt shoppers actually need.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sign-Up Form -->
+  <section id="tester-form" class="tester-form-section">
+    <div class="container">
+      <div class="tester-form-card">
+        <div class="tester-form-header">
+          <h2>Apply to Be a Tester</h2>
+          <p>Spots are limited and not everyone will be selected. We'll review every application and reach out to selected testers via email.</p>
+        </div>
+
+        <form action="https://formsubmit.co/contact@fullyautomatedthings.com" method="POST" class="contact-form">
+          <input type="hidden" name="_subject" value="Auto Tip Map - Tester Application">
+          <input type="hidden" name="_captcha" value="true">
+          <input type="hidden" name="_next" value="https://fullyautomatedthings.com/autotipmap/tester-thankyou.html">
+          <input type="text" name="_honey" style="display:none">
+
+          <div class="form-group">
+            <label for="name">Name <span class="form-required">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span class="form-required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="hours">Hours per week on Shipt <span class="form-optional">(optional)</span></label>
+            <div class="select-wrapper">
+              <select id="hours" name="hours">
+                <option value="" disabled selected>Select your weekly hours</option>
+                <option value="Less than 10">Less than 10 hours</option>
+                <option value="10-20">10 &ndash; 20 hours</option>
+                <option value="20-30">20 &ndash; 30 hours</option>
+                <option value="30-40">30 &ndash; 40 hours</option>
+                <option value="40+">40+ hours</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Android Phone <span class="form-optional">(optional)</span></label>
+            <div class="select-wrapper">
+              <select id="phone" name="phone">
+                <option value="" disabled selected>Select your phone</option>
+
+                <optgroup label="Samsung Galaxy S Series">
+                  <option value="Samsung Galaxy S25 Ultra">Samsung Galaxy S25 Ultra</option>
+                  <option value="Samsung Galaxy S25+">Samsung Galaxy S25+</option>
+                  <option value="Samsung Galaxy S25">Samsung Galaxy S25</option>
+                  <option value="Samsung Galaxy S24 Ultra">Samsung Galaxy S24 Ultra</option>
+                  <option value="Samsung Galaxy S24+">Samsung Galaxy S24+</option>
+                  <option value="Samsung Galaxy S24">Samsung Galaxy S24</option>
+                  <option value="Samsung Galaxy S24 FE">Samsung Galaxy S24 FE</option>
+                  <option value="Samsung Galaxy S23 Ultra">Samsung Galaxy S23 Ultra</option>
+                  <option value="Samsung Galaxy S23+">Samsung Galaxy S23+</option>
+                  <option value="Samsung Galaxy S23">Samsung Galaxy S23</option>
+                  <option value="Samsung Galaxy S23 FE">Samsung Galaxy S23 FE</option>
+                  <option value="Samsung Galaxy S22 Ultra">Samsung Galaxy S22 Ultra</option>
+                  <option value="Samsung Galaxy S22+">Samsung Galaxy S22+</option>
+                  <option value="Samsung Galaxy S22">Samsung Galaxy S22</option>
+                  <option value="Samsung Galaxy S21 Ultra">Samsung Galaxy S21 Ultra</option>
+                  <option value="Samsung Galaxy S21+">Samsung Galaxy S21+</option>
+                  <option value="Samsung Galaxy S21">Samsung Galaxy S21</option>
+                  <option value="Samsung Galaxy S21 FE">Samsung Galaxy S21 FE</option>
+                  <option value="Samsung Galaxy S20 Ultra">Samsung Galaxy S20 Ultra</option>
+                  <option value="Samsung Galaxy S20+">Samsung Galaxy S20+</option>
+                  <option value="Samsung Galaxy S20">Samsung Galaxy S20</option>
+                  <option value="Samsung Galaxy S20 FE">Samsung Galaxy S20 FE</option>
+                </optgroup>
+
+                <optgroup label="Samsung Galaxy A Series">
+                  <option value="Samsung Galaxy A56">Samsung Galaxy A56</option>
+                  <option value="Samsung Galaxy A55">Samsung Galaxy A55</option>
+                  <option value="Samsung Galaxy A54">Samsung Galaxy A54</option>
+                  <option value="Samsung Galaxy A53">Samsung Galaxy A53</option>
+                  <option value="Samsung Galaxy A36">Samsung Galaxy A36</option>
+                  <option value="Samsung Galaxy A35">Samsung Galaxy A35</option>
+                  <option value="Samsung Galaxy A34">Samsung Galaxy A34</option>
+                  <option value="Samsung Galaxy A26">Samsung Galaxy A26</option>
+                  <option value="Samsung Galaxy A25">Samsung Galaxy A25</option>
+                  <option value="Samsung Galaxy A16">Samsung Galaxy A16</option>
+                  <option value="Samsung Galaxy A15">Samsung Galaxy A15</option>
+                  <option value="Samsung Galaxy A14">Samsung Galaxy A14</option>
+                </optgroup>
+
+                <optgroup label="Samsung Galaxy Z Series">
+                  <option value="Samsung Galaxy Z Fold6">Samsung Galaxy Z Fold6</option>
+                  <option value="Samsung Galaxy Z Fold5">Samsung Galaxy Z Fold5</option>
+                  <option value="Samsung Galaxy Z Fold4">Samsung Galaxy Z Fold4</option>
+                  <option value="Samsung Galaxy Z Flip6">Samsung Galaxy Z Flip6</option>
+                  <option value="Samsung Galaxy Z Flip5">Samsung Galaxy Z Flip5</option>
+                  <option value="Samsung Galaxy Z Flip4">Samsung Galaxy Z Flip4</option>
+                </optgroup>
+
+                <optgroup label="Google Pixel">
+                  <option value="Google Pixel 9 Pro XL">Google Pixel 9 Pro XL</option>
+                  <option value="Google Pixel 9 Pro">Google Pixel 9 Pro</option>
+                  <option value="Google Pixel 9">Google Pixel 9</option>
+                  <option value="Google Pixel 9a">Google Pixel 9a</option>
+                  <option value="Google Pixel 8 Pro">Google Pixel 8 Pro</option>
+                  <option value="Google Pixel 8">Google Pixel 8</option>
+                  <option value="Google Pixel 8a">Google Pixel 8a</option>
+                  <option value="Google Pixel 7 Pro">Google Pixel 7 Pro</option>
+                  <option value="Google Pixel 7">Google Pixel 7</option>
+                  <option value="Google Pixel 7a">Google Pixel 7a</option>
+                  <option value="Google Pixel 6 Pro">Google Pixel 6 Pro</option>
+                  <option value="Google Pixel 6">Google Pixel 6</option>
+                  <option value="Google Pixel 6a">Google Pixel 6a</option>
+                </optgroup>
+
+                <optgroup label="OnePlus">
+                  <option value="OnePlus 13">OnePlus 13</option>
+                  <option value="OnePlus 12">OnePlus 12</option>
+                  <option value="OnePlus 12R">OnePlus 12R</option>
+                  <option value="OnePlus 11">OnePlus 11</option>
+                  <option value="OnePlus 10 Pro">OnePlus 10 Pro</option>
+                  <option value="OnePlus Nord N30">OnePlus Nord N30</option>
+                  <option value="OnePlus Nord N20">OnePlus Nord N20</option>
+                </optgroup>
+
+                <optgroup label="Motorola">
+                  <option value="Motorola Edge 50 Ultra">Motorola Edge 50 Ultra</option>
+                  <option value="Motorola Edge 50 Pro">Motorola Edge 50 Pro</option>
+                  <option value="Motorola Edge 2024">Motorola Edge 2024</option>
+                  <option value="Motorola Razr+ 2024">Motorola Razr+ 2024</option>
+                  <option value="Motorola Razr 2024">Motorola Razr 2024</option>
+                  <option value="Moto G Power 2024">Moto G Power 2024</option>
+                  <option value="Moto G Stylus 2024">Moto G Stylus 2024</option>
+                  <option value="Moto G 5G 2024">Moto G 5G 2024</option>
+                </optgroup>
+
+                <optgroup label="Other">
+                  <option value="Other">Other / Not listed</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg contact-submit">Submit Application</button>
+        </form>
+
+        <p class="tester-form-note">By applying, you agree to receive email communication about the Auto Tip Map beta program. We'll never share your information with anyone.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <img src="assets/images/ATMIcon.png" alt="Auto Tip Map" class="footer-icon">
+        <div>
+          <strong>Auto Tip Map</strong>
+          <span>by Fully Automated Things</span>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+        <a href="guide.html">Guide</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Fully Automated Things. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+      toggle.classList.toggle('active');
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle.classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
