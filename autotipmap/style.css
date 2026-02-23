@@ -474,64 +474,48 @@ img {
   background: var(--surface-alt);
 }
 
-.screenshot-wrapper {
-  position: relative;
-}
-
 .screenshot-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  filter: blur(6px);
-  opacity: 0.5;
-  pointer-events: none;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
 }
 
-.screenshot-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.screenshot-item {
+  text-align: center;
 }
 
-.screenshot-overlay span {
-  font-size: 28px;
-  font-weight: 700;
-  color: var(--primary);
-  background: rgba(255, 255, 255, 0.85);
-  padding: 16px 48px;
-  border-radius: 14px;
-  border: 2px solid var(--secondary);
-}
-
-.screenshot-placeholder {
-  aspect-ratio: 9 / 16;
+.screenshot-frame {
   background: var(--surface);
-  border: 2px dashed var(--border);
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s, box-shadow 0.25s;
 }
 
-.placeholder-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
+.screenshot-frame:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(79, 70, 229, 0.12);
+}
+
+.screenshot-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.screenshot-item h3 {
+  font-size: 17px;
+  margin-bottom: 6px;
+}
+
+.screenshot-item p {
   color: var(--text-secondary);
-}
-
-.placeholder-inner svg {
-  width: 48px;
-  height: 48px;
-  opacity: 0.4;
-}
-
-.placeholder-inner span {
   font-size: 14px;
-  font-weight: 600;
+  line-height: 1.6;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 /* ===== Download CTA ===== */
@@ -842,6 +826,7 @@ img {
 
   .screenshot-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
   }
 }
 
@@ -894,6 +879,7 @@ img {
 
   .screenshot-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 
   .flow-step {
