@@ -492,7 +492,6 @@ img {
   border-radius: 20px;
   overflow: hidden;
   margin-top: auto;
-  padding-top: 14px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transition: transform 0.25s, box-shadow 0.25s;
 }
@@ -519,6 +518,7 @@ img {
   line-height: 1.6;
   max-width: 320px;
   margin: 0 auto;
+  padding-bottom: 14px;
 }
 
 /* ===== Download CTA ===== */
