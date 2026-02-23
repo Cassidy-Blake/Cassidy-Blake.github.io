@@ -478,6 +478,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 36px;
+  align-items: start;
 }
 
 .screenshot-item {
