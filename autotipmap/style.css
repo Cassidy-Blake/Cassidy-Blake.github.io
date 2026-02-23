@@ -478,11 +478,12 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 36px;
-  align-items: start;
 }
 
 .screenshot-item {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .screenshot-frame {
@@ -490,7 +491,8 @@ img {
   border: 1px solid var(--border);
   border-radius: 20px;
   overflow: hidden;
-  margin-top: 14px;
+  margin-top: auto;
+  padding-top: 14px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   transition: transform 0.25s, box-shadow 0.25s;
 }
