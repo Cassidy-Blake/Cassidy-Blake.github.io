@@ -39,7 +39,7 @@
       <div class="privacy-card">
         <div class="privacy-header">
           <h1>Privacy Policy</h1>
-          <p class="privacy-updated">Last Updated: February 23, 2026</p>
+          <p class="privacy-updated">Last Updated: February 24, 2026</p>
           <p>This Privacy Policy describes how Auto Tip Map ("the App," "we," "us," or "our") collects, uses, stores, and protects your information. We are committed to transparency about our data practices and to keeping your data under your control.</p>
         </div>
 
@@ -96,10 +96,10 @@
           <h2>2. How Your Data Is Stored</h2>
 
           <h3>2.1 On-Device Storage</h3>
-          <p>All delivery data, order records, bonus entries, time entries, and location data are stored locally on your device within the App's private storage area. No other apps can access this data.</p>
+          <p>All delivery data, order records, bonus entries, time entries, and location data are stored locally on your device within the App's private storage area. No other apps can access this data. Your device's built-in file-based encryption (FBE) protects this data at rest whenever your device is locked.</p>
 
           <h3>2.2 Android Backup</h3>
-          <p>If you have Android's built-in backup enabled on your device, the App's database and settings may be backed up to your personal Google Drive account through Android's standard backup system. This backup is managed entirely by Android and your Google account &mdash; the App developer has no access to these backups. You can disable this in your device's system settings under "Backup."</p>
+          <p>If you have Android's built-in backup enabled on your device, the App's settings (such as theme and feature preferences) may be backed up to your personal Google Drive account through Android's standard backup system. Your delivery database is not included in these backups. This backup is managed entirely by Android and your Google account &mdash; the App developer has no access to these backups. You can disable this in your device's system settings under "Backup."</p>
 
           <h3>2.3 Manual Backup and Export</h3>
           <p>You may manually export an encrypted backup file from within the App. You control where this file is saved and with whom, if anyone, it is shared.</p>
@@ -193,6 +193,8 @@
           <p>We take reasonable measures to protect your data:</p>
           <ul>
             <li>All delivery and order data is stored in the App's private storage area, which is inaccessible to other apps on your device</li>
+            <li>Your device's file-based encryption (FBE) protects all app data at rest whenever your device is locked</li>
+            <li>The delivery database is excluded from cloud backups to prevent sensitive data from leaving your device</li>
             <li>Manual backup files are encrypted</li>
             <li>Network communications use HTTPS encryption in transit</li>
             <li>The App does not store passwords, payment information, or authentication credentials of any kind</li>
