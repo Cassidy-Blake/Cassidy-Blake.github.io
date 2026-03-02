@@ -39,7 +39,7 @@
       <div class="privacy-card">
         <div class="privacy-header">
           <h1>Privacy Policy</h1>
-          <p class="privacy-updated">Last Updated: February 25, 2026</p>
+          <p class="privacy-updated">Last Updated: March 2, 2026</p>
           <p>This Privacy Policy describes how Auto Tip Map ("the App," "we," "us," or "our") collects, uses, stores, and protects your information. We are committed to transparency about our data practices and to keeping your data under your control.</p>
         </div>
 
@@ -60,8 +60,9 @@
 
           <h3>1.2 Location Data</h3>
           <ul>
-            <li>Your device's current location, used solely to display your position on the in-app map</li>
+            <li>Your device's current location, used to display your position on the in-app map</li>
             <li>Coordinates derived from delivery addresses, used to place delivery pins on the map</li>
+            <li>If you enable the mileage tracker, the App records your GPS location at regular intervals while tracking is active. Each location point includes latitude, longitude, accuracy, speed, and a timestamp. These points are grouped into trip sessions that record the date, start time, end time, and total distance driven. All mileage data is stored locally on your device and is never transmitted to our servers.</li>
           </ul>
 
           <h3>1.3 User-Entered Data</h3>
@@ -90,13 +91,19 @@
 
           <h3>1.8 App Preferences</h3>
           <p>Theme settings, tip-scoring thresholds, and feature toggles. These are standard app settings and contain no personal or financial data.</p>
+
+          <h3>1.9 Vehicle Information</h3>
+          <p>If you use the fuel tracker, you may select your vehicle's year, make, model, and fuel type (gasoline, diesel, or electric). The App also stores an EPA-sourced or user-entered fuel efficiency rating for cost calculations. This information is stored locally on your device.</p>
+
+          <h3>1.10 Energy Price Data</h3>
+          <p>If you use the fuel tracker, the App stores a history of fuel or electricity prices. Prices can be entered manually or fetched automatically from the U.S. Energy Information Administration (EIA). Your selected state or region is stored locally as a preference to retrieve relevant prices. Price records include the effective date, price per unit, energy type, and source.</p>
         </div>
 
         <div class="privacy-section">
           <h2>2. How Your Data Is Stored</h2>
 
           <h3>2.1 On-Device Storage</h3>
-          <p>All delivery data, order records, bonus entries, time entries, and location data are stored locally on your device within the App's private storage area. No other apps can access this data. Your device's built-in file-based encryption (FBE) protects this data at rest whenever your device is locked.</p>
+          <p>All delivery data, order records, bonus entries, time entries, mileage records, vehicle information, energy price history, and location data are stored locally on your device within the App's private storage area. No other apps can access this data. Your device's built-in file-based encryption (FBE) protects this data at rest whenever your device is locked.</p>
 
           <h3>2.2 Android Backup</h3>
           <p>If you have Android's built-in backup enabled on your device, the App's settings (such as theme and feature preferences) may be backed up to your personal Google Drive account through Android's standard backup system. Your delivery database is not included in these backups. This backup is managed entirely by Android and your Google account &mdash; the App developer has no access to these backups. You can disable this in your device's system settings under "Backup."</p>
@@ -119,6 +126,8 @@
             <li>Showing your current position on the map</li>
             <li>Automatically detecting and logging tips from notifications (if enabled)</li>
             <li>Reading order information from your screen (if enabled)</li>
+            <li>Tracking mileage driven during delivery sessions (if enabled)</li>
+            <li>Estimating fuel or energy costs based on your vehicle and current prices (if enabled)</li>
           </ul>
         </div>
 
@@ -134,16 +143,19 @@
           <h3>4.3 Address Lookup</h3>
           <p>When the App converts a delivery address into map coordinates, the address is sent to a geocoding service. This is used solely to place pins on the map.</p>
 
-          <h3>4.4 Crash and Error Reporting</h3>
+          <h3>4.4 Energy Price Lookup</h3>
+          <p>If you enable automatic gas price updates in the fuel tracker, the App sends your selected state or region code to a server-side function that retrieves the current average fuel price from the U.S. Energy Information Administration (EIA). Only the region code is transmitted; no personal data, location history, or vehicle information is included in these requests.</p>
+
+          <h3>4.5 Crash and Error Reporting</h3>
           <p>Crash reports and non-fatal error reports are sent to a third-party error reporting service to help us identify and fix bugs. These reports contain only technical error information (such as error type and code location). They do not contain your personal data, delivery addresses, order numbers, or earnings information. No user identifier is attached to these reports.</p>
 
-          <h3>4.5 Feedback Submissions</h3>
+          <h3>4.6 Feedback Submissions</h3>
           <p>If you choose to submit feedback through the App, the information you provide (feedback category, description, optional contact email, and general device information) is sent to our server to be delivered to the developer. This is entirely voluntary and user-initiated.</p>
 
-          <h3>4.6 No Analytics or Advertising</h3>
+          <h3>4.7 No Analytics or Advertising</h3>
           <p>The App does not use analytics tracking, advertising SDKs, or any third-party service that collects user behavior data.</p>
 
-          <h3>4.7 External Links</h3>
+          <h3>4.8 External Links</h3>
           <p>The App contains optional links to community pages. Tapping these links opens your device's web browser. The App does not send any data to these platforms.</p>
         </div>
 
@@ -160,18 +172,21 @@
           <p>Used to show information on your screen while you are using other apps. You must explicitly grant this permission in your device's settings.</p>
 
           <h3>5.4 Internet Access</h3>
-          <p>Used to load the map, look up address coordinates, submit crash reports, and send feedback when you choose to do so.</p>
+          <p>Used to load the map, look up address coordinates, fetch fuel prices from the EIA (if enabled), submit crash reports, and send feedback when you choose to do so.</p>
 
           <h3>5.5 Location</h3>
-          <p>Used solely to show your current position on the in-app map. Your location is never transmitted to our servers, stored in our records, or shared with any third party. You can deny this permission and still use the App; the map will simply not show your current position.</p>
+          <p>Used to show your current position on the in-app map and, if you enable the mileage tracker, to record your driving route during active tracking sessions. Location data collected by the mileage tracker is stored locally on your device and is never transmitted to our servers or shared with any third party. You can deny this permission and still use the App; the map will not show your current position and mileage tracking will be unavailable.</p>
 
-          <h3>5.6 Notifications</h3>
+          <h3>5.6 Background Location</h3>
+          <p>If you enable the mileage tracker, the App requests background location access so it can continue recording your route while the App is not in the foreground. A persistent notification is displayed whenever background location tracking is active. You can revoke this permission at any time; doing so will prevent mileage tracking from running in the background.</p>
+
+          <h3>5.7 Notifications</h3>
           <p>Used to notify you when a tip has been automatically logged. You can disable these notifications at any time.</p>
 
-          <h3>5.7 Photo and Media Access</h3>
+          <h3>5.8 Photo and Media Access</h3>
           <p>Used to allow you to select screenshots from your device for import. The App only reads images you explicitly select.</p>
 
-          <h3>5.8 Background Operation</h3>
+          <h3>5.9 Background Operation</h3>
           <p>Used to keep the screen-reading feature running reliably while you use other apps. A persistent notification is displayed whenever this is active.</p>
         </div>
 
@@ -179,7 +194,7 @@
           <h2>6. Data Retention</h2>
           <p>All data remains on your device until you choose to delete it. You can:</p>
           <ul>
-            <li>Delete individual orders, locations, bonuses, or time entries from within the App</li>
+            <li>Delete individual orders, locations, bonuses, time entries, mileage trips, vehicles, or energy price records from within the App</li>
             <li>Export a backup before deleting data</li>
             <li>Uninstall the App, which removes all locally stored data</li>
             <li>Clear the App's data through your device's system settings</li>
