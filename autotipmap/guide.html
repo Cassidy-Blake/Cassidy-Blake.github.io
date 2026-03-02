@@ -243,6 +243,64 @@
 
         </div>
 
+        <!-- ═══ TOPIC: Mileage Tracking ═══ -->
+        <div class="guide-topic-row" onclick="toggleSection('MileageTrackingTopic')">
+          <span class="guide-topic-label">Mileage Tracking</span>
+          <span class="guide-chevron" id="MileageTrackingTopicChevron">&#x25B8;</span>
+        </div>
+        <div class="guide-topic-content" id="MileageTrackingTopicContent">
+
+          <div class="guide-sub-row" onclick="toggleSection('EnableDisableMileage')">
+            <span class="guide-sub-label">Enabling/Disabling Mileage Tracking</span>
+            <span class="guide-chevron-sub" id="EnableDisableMileageChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="EnableDisableMileageContent">
+            <p>Mileage Tracking is an optional feature. To turn it on or off, go to Settings &gt; Optional Features and use the Mileage Tracking toggle.</p>
+            <p>When enabled, a mileage tracking button appears on the home screen and the Mileage Tracking page becomes available in the sidebar menu. When disabled, these features are hidden.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('StartStopMileage')">
+            <span class="guide-sub-label">Starting/Stopping Mileage Tracking</span>
+            <span class="guide-chevron-sub" id="StartStopMileageChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="StartStopMileageContent">
+            <p>You can start tracking your driving distance from the home screen by tapping the mileage tracking button. While tracking, Auto Tip Map uses GPS to record your distance in real-time. Tap the button again to stop tracking. The completed trip is saved automatically.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('ManualTrips')">
+            <span class="guide-sub-label">Manually Adding Trips</span>
+            <span class="guide-chevron-sub" id="ManualTripsChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="ManualTripsContent">
+            <p>To manually add a trip, open the Mileage Tracking page from the sidebar menu and tap "+ Add Trip." Enter the date, start time, end time, and total miles for your trip.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('EditingTrips')">
+            <span class="guide-sub-label">Editing Trips</span>
+            <span class="guide-chevron-sub" id="EditingTripsChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="EditingTripsContent">
+            <p>To edit an existing trip, go to the Mileage Tracking page and tap the edit icon next to the trip you want to change. You can adjust the date, times, and miles.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('DeletingTrips')">
+            <span class="guide-sub-label">Deleting Trips</span>
+            <span class="guide-chevron-sub" id="DeletingTripsChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="DeletingTripsContent">
+            <p>To delete a trip, go to the Mileage Tracking page and tap the delete icon next to the trip you want to remove. You'll be asked to confirm before the trip is deleted.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('ExportingMileage')">
+            <span class="guide-sub-label">Exporting Mileage Data</span>
+            <span class="guide-chevron-sub" id="ExportingMileageChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="ExportingMileageContent">
+            <p>You can export your mileage log as a CSV file by tapping "Export CSV" at the bottom of the Mileage Tracking page. The export includes the date, start time, end time, and miles for each trip within your selected date range.</p>
+          </div>
+
+        </div>
+
         <!-- ═══ TOPIC: Order History ═══ -->
         <div class="guide-topic-row" onclick="toggleSection('OrderHistoryTopic')">
           <span class="guide-topic-label">Order History</span>
@@ -422,6 +480,31 @@
           <div class="guide-sub-content" id="SettingsAppBehaviorContent">
             <p>Background Tip Capture: When enabled, Auto Tip Map listens for tip notifications from your delivery app even when the app is closed. This requires notification access permission. If disabled, tips will only be captured while the overlay is running.</p>
             <p>Time Tracking: When enabled, a time tracking button appears on the home screen and the Time Tracking page becomes available in the sidebar menu. When disabled, these features are hidden.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('SettingsMileageTracking')">
+            <span class="guide-sub-label">Mileage Tracking</span>
+            <span class="guide-chevron-sub" id="SettingsMileageTrackingChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="SettingsMileageTrackingContent">
+            <p>When enabled, a mileage tracking button appears on the home screen and the Mileage Tracking page becomes available in the sidebar menu. When disabled, these features are hidden. This toggle can be found under Settings &gt; Optional Features.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('SettingsFuelCost')">
+            <span class="guide-sub-label">Fuel Cost Tracking</span>
+            <span class="guide-chevron-sub" id="SettingsFuelCostChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="SettingsFuelCostContent">
+            <p>Fuel Cost Tracking is a sub-feature of Mileage Tracking. When enabled, Auto Tip Map estimates your per-trip fuel cost based on your vehicle's fuel efficiency and current energy prices. This toggle appears under Settings &gt; Optional Features when Mileage Tracking is enabled.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('SettingsVehicleConfig')">
+            <span class="guide-sub-label">Vehicle Configuration</span>
+            <span class="guide-chevron-sub" id="SettingsVehicleConfigChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="SettingsVehicleConfigContent">
+            <p>To set up fuel cost tracking, tap "Configure Vehicle &amp; Prices" in Settings &gt; Optional Features (under Fuel Cost Tracking). On the setup page, select your vehicle's year, make, and model. Auto Tip Map will look up your vehicle's EPA fuel efficiency rating. You can optionally override the efficiency value if your real-world mileage differs.</p>
+            <p>Next, set your energy price. For gas or diesel vehicles, you can either fetch the latest estimated price based on your state or enter a price per gallon manually. For electric vehicles, enter your electricity cost per kWh.</p>
           </div>
 
           <div class="guide-sub-row" onclick="toggleSection('SettingsDataMgmt')">
