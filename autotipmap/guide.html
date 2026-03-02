@@ -428,6 +428,22 @@
             <p>This shows your total earnings divided by your tracked hours for the selected time period. This helps you see how much you're earning per hour. This card is only visible when Time Tracking is enabled.</p>
           </div>
 
+          <div class="guide-sub-row" onclick="toggleSection('StatsMilesDriven')">
+            <span class="guide-sub-label">Miles Driven</span>
+            <span class="guide-chevron-sub" id="StatsMilesDrivenChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="StatsMilesDrivenContent">
+            <p>This shows the total miles you've driven during the selected time period based on your tracked mileage data. This card is only visible when Mileage Tracking is enabled.</p>
+          </div>
+
+          <div class="guide-sub-row" onclick="toggleSection('StatsEstFuelCost')">
+            <span class="guide-sub-label">Est. Fuel Cost</span>
+            <span class="guide-chevron-sub" id="StatsEstFuelCostChevron">&#x25B8;</span>
+          </div>
+          <div class="guide-sub-content" id="StatsEstFuelCostContent">
+            <p>This shows the estimated fuel cost for your trips during the selected time period, calculated from your miles driven, vehicle fuel efficiency, and energy price. This card is only visible when both Mileage Tracking and Fuel Cost Tracking are enabled.</p>
+          </div>
+
           <div class="guide-sub-row" onclick="toggleSection('PastTipsReceived')">
             <span class="guide-sub-label">Past Tips Received Today</span>
             <span class="guide-chevron-sub" id="PastTipsReceivedChevron">&#x25B8;</span>
