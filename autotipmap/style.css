@@ -1169,9 +1169,9 @@ img {
 
 .tester-perks-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
-  max-width: 840px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
